@@ -1,0 +1,62 @@
+package com.example.trackerproject;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class MainActivity extends AppCompatActivity {
+
+    Button submit;
+    EditText OilKG, CanKG, PlasticKG, BoardKG;
+    TextView totalRM;
+    float weightOil, weightCan, weightPlastic, weightBoard;
+    double total;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        OilKG = (EditText) findViewById(R.id.editTextOil);
+        CanKG = (EditText) findViewById(R.id.editTextCan);
+        PlasticKG = (EditText) findViewById(R.id.editTextPlastic);
+        BoardKG = (EditText) findViewById(R.id.editTextBoard);
+        submit = (Button) findViewById(R.id.buttonSubmit);
+        totalRM = (TextView) findViewById(R.id.textTotal);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (OilKG.getText().toString().isEmpty() || CanKG.getText().toString().isEmpty() || PlasticKG.getText().toString().isEmpty() || BoardKG.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Enter the Weight", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Oil (KG) -  " + OilKG.getText().toString() + " \n" + "Can (KG) -  " + CanKG.getText().toString()
+                            + " \n" + "Plastic (KG) -  " + PlasticKG.getText().toString() + " \n" + "Board (KG) -  " + BoardKG.getText().toString(), Toast.LENGTH_SHORT).show();
+                }
+
+                //convert string to float
+
+                weightOil = Float.parseFloat(OilKG.getText().toString());
+                weightCan = Float.parseFloat(CanKG.getText().toString());
+                weightPlastic = Float.parseFloat(PlasticKG.getText().toString());
+                weightBoard = Float.parseFloat(BoardKG.getText().toString());
+
+                //calculate total money get from recycle
+                total = (weightOil*2)+(weightCan*3)+(weightPlastic*1)+(weightBoard*10);
+
+                String message = "Total (RM):" + NumberFormat.getCurrencyInstance(new Locale("en", "MY")).format(total);
+                totalRM.setText(message);
+
+            }
+
+        });
+    }
+
+}
+
