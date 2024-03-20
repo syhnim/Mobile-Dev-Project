@@ -1,0 +1,37 @@
+package com.example.project;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    RecyclerView.Adapter programAdapter;
+    RecyclerView.LayoutManager layoutmanager;
+
+    String[] newsList = {"Sea life offers a lens for self-exploration in ‘How Far the Light Reaches’",
+                        "Here’s what happened to the Delaware-sized iceberg that broke off Antarctica",
+                        "Mangrove forests expand and contract with a lunar cycle",
+                        "A coral pollution study unexpectedly helped explain Hurricane Maria’s fury"};
+
+    String[] newsDescription = {"In How Far the Light Reaches, Sabrina Imbler shows us that the ocean, in all its mystery and dazzling glory, is queer — that is, the life that takes shape there challenges how we landlubbers perceive ways of being. This collection of essays tells the stories of 10 sea creatures, with Imbler, a queer and mixed-race writer, weaving in stories of their own family, self-discovery, sexuality and healing.",
+                                "In July 2017, after weeks of anticipation, a massive iceberg about the size of Delaware split from the Antarctic Peninsula (SN: 7/12/17). Satellite images show that the orphaned iceberg, known as A68, ultimately disintegrated in the Southern Ocean. Now, researchers say they have pieced together the powerful forces that led to that final breakup.",
+                                "Long-term tidal cycles set in motion by the moon drive, in large part, the expansion and contraction of mangrove forests in Australia, researchers report in the Sept. 16 Science Advances. This discovery is key to predicting when stands of mangroves, which are good at sequestering carbon and could help fight climate change, are most likely to proliferate (SN: 11/18/21). Such knowledge could inform efforts to protect and restore the forests.",
+                                "Hurricane Maria struck the island of Puerto Rico early on September 20, 2017, with 250-kilometer-per-hour winds, torrential rains and a storm surge up to three meters high. In its wake: nearly 3,000 people dead, an almost yearlong power outage and over $90 billion in damages to homes, businesses and essential infrastructure, including roads and bridges."};
+    int[] newsImages = {R.drawable.sea, R.drawable.iceberg, R.drawable.lunar, R.drawable.coral};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        recyclerView = findViewById(R.id.rvNews);
+        recyclerView.setHasFixedSize(true);
+        layoutmanager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutmanager);
+        programAdapter = new ProgramAdapter(this, newsList, newsDescription, newsImages);
+        recyclerView.setAdapter(programAdapter);
+    }
+}
