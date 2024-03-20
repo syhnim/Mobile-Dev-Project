@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textPlastic"
+        android:layout_width="30dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="42dp"
+        android:text="kg"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextPlastic"
+        app:layout_constraintTop_toBottomOf="@+id/plasticText" />
+
+    <TextView
+        android:id="@+id/textBoard"
+        android:layout_width="30dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:text="kg"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/editTextBoard"
+        app:layout_constraintTop_toBottomOf="@+id/eboardText" />
+
+    <TextView
+        android:id="@+id/trackerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's recycle to save our world!"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+
+    <ImageView
+        android:id="@+id/cookingImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/canImage"
+        app:layout_constraintTop_toBottomOf="@+id/trackerTitle"
+        app:srcCompat="@drawable/cookingoil" />
+
+    <TextView
+        android:id="@+id/oilText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="15dp"
+        android:text="Oil (Any oil type)"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextOil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/canText"
+        app:layout_constraintTop_toBottomOf="@+id/cookingImage" />
+
+
+    <ImageView
+        android:id="@+id/eboardImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCan"
+        app:srcCompat="@drawable/eboard" />
+
+    <ImageView
+        android:id="@+id/plasticImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eboardImage"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOil"
+        app:srcCompat="@drawable/plasticbottle" />
+
+
+    <TextView
+        android:id="@+id/plasticText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="52dp"
+        android:text="Plastic Bottle"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eboardText"
+        app:layout_constraintTop_toBottomOf="@+id/plasticImage" />
+
+    <TextView
+        android:id="@+id/eboardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="10dp"
+        android:text="Electronic Board"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eboardImage" />
+
+    <ImageView
+        android:id="@+id/canImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trackerTitle"
+        app:srcCompat="@drawable/can" />
+
+    <TextView
+        android:id="@+id/canText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="15dp"
+        android:text="Can"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/canImage" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="160dp"
+        android:text="SUBMIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eboardImage" />
+
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginBottom="98dp"
+        android:text="Total (RM):"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBoard" />
+
+    <TextView
+        android:id="@+id/textNote"
+        android:layout_width="194dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        android:text="Note: \nOil = RM2.00/kg \nElectronic Board = RM10.00/kg \nPlastic bottle = RM1.00/kg \nCan = RM3.00/kg"
+        android:textAlignment="textEnd"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textTotal"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubmit" />
+
+    <EditText
+        android:id="@+id/editTextCan"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textCan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/canText" />
+
+    <EditText
+        android:id="@+id/editTextOil"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textCan"
+        app:layout_constraintTop_toBottomOf="@+id/oilText" />
+
+    <EditText
+        android:id="@+id/editTextBoard"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="9dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eboardText" />
+
+    <EditText
+        android:id="@+id/editTextPlastic"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textBoard"
+        app:layout_constraintTop_toBottomOf="@+id/plasticText" />
+
+    <TextView
+        android:id="@+id/textCan"
+        android:layout_width="30dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="49dp"
+        android:text="kg"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/editTextCan"
+        app:layout_constraintTop_toBottomOf="@+id/canImage" />
+
+    <TextView
+        android:id="@+id/textOil"
+        android:layout_width="30dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="42dp"
+        android:text="kg"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextOil"
+        app:layout_constraintTop_toBottomOf="@+id/oilText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
